@@ -1,0 +1,80 @@
+/** CSS
+.text-area{
+	-fx-border-color:derive(gray,80%);
+}
+**/
+
+.text-area .content {
+    -fx-background-color: #333333;
+}
+
+.text-area {
+    -fx-text-fill: WHITE;
+}
+
+/* The main scrollbar CSS class of ListView */
+.text-area .scroll-bar:horizontal ,
+.text-area .scroll-bar:vertical{
+    -fx-background-color: #262626;
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.text-area .increment-button ,.text-area .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0em;
+}
+
+.text-area .scroll-bar .increment-arrow,
+.text-area .scroll-bar .decrement-arrow {
+	-fx-shape: " ";
+	-fx-padding: 0px;
+}
+
+.text-area .scroll-bar:vertical .increment-button ,
+.text-area .scroll-bar:vertical .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 0em;
+	-fx-padding: 0 10 0 0;
+}
+
+/* The main scrollbar **track** CSS class  */
+.text-area .scroll-bar:horizontal .track ,
+.text-area .scroll-bar:vertical .track{
+    -fx-background-color: #262626;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.text-area .scroll-bar:horizontal .thumb,
+.text-area .scroll-bar:vertical .thumb {
+    -fx-background-color: #4d4d4d;
+	-fx-background-insets: 0, 0, 0;
+	-fx-background-radius: 0em;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/** EVENT CSS **/
+/* ------------------------------------------------------------------------------------- */
+
+/* The main scrollbar **track** CSS class on event of "hover" and "pressed" */
+
+.text-area .scroll-bar:horizontal:hover .track ,
+.text-area .scroll-bar:horizontal:pressed .track ,
+.text-area .scroll-bar:vertical:hover .track,
+.text-area .scroll-bar:vertical:pressed .track{
+     -fx-background-color: #323232;
+	 -fx-opacity: 0.2;
+	 -fx-background-radius: 0em;
+
+}
+
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
+.text-area .scroll-bar .thumb:hover,
+.text-area .scroll-bar .thumb:pressed{
+    -fx-background-color: #666666;
+}
+
+.text-area .increment-button:hover ,.text-area .decrement-button:hover {
+    -fx-background-color: #666666;
+/*	-fx-padding:10px; */
+}

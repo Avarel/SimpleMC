@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns:ee="http://javafx.com/javafx/8.0.60" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+
+	<stylesheets>
+		<URL value="@style.css" />
+	</stylesheets>
+
+	<columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+	</rowConstraints>
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <GridPane layoutX="54.0" layoutY="64.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="62.0" prefWidth="471.0" style="-fx-background-color: #1b1b1b;" GridPane.hgrow="SOMETIMES" GridPane.vgrow="SOMETIMES">
+                     <children>
+                        <GridPane layoutX="21.0" layoutY="23.0" prefHeight="55.0" prefWidth="271.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="startStopButton" buttonType="RAISED" defaultButton="true" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: WHITE;" text="Start Server" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="killButton" buttonType="RAISED" disable="true" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: WHITE;" text="Kill Server" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </GridPane>
+                        <ImageView fx:id="statusImg" fitHeight="75.0" fitWidth="526.0" layoutX="285.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="285.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../images/moon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="75.0" fitWidth="526.0" layoutX="285.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/clouds.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane layoutX="400.0" maxHeight="75.0" minWidth="50.0" prefHeight="75.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to right, #D9E2FF,#b3c3ff);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXComboBox fx:id="jarSelector" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: W;" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                              <JFXButton fx:id="statusText" disable="true" layoutX="308.0" layoutY="14.0" ripplerFill="WHITE" style="-fx-background-color: #9fb5ff;" text="IP: OFFLINE" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <GridPane GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #333333;">
+                           <GridPane.margin>
+                              <Insets left="-2.0" right="-3.0" />
+                           </GridPane.margin>
+                           <children>
+                              <JFXTextArea fx:id="consoleField" editable="false" focusColor="TRANSPARENT" promptText="Run something..." unFocusColor="TRANSPARENT" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Courier New" size="12.0" />
+                                 </font>
+                              </JFXTextArea>
+                              <JFXDrawer defaultDrawerSize="200.0" direction="RIGHT" layoutX="805.0" layoutY="189.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cccccc;" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="-1.0" right="-1.0" />
+                           </GridPane.margin>
+                           <children>
+                              <JFXTextField fx:id="inputField" promptText="Type a command . . ." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
